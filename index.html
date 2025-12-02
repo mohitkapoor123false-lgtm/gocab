@@ -384,7 +384,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li>About Us</li>
+            <li><a href="#" id="about-link">About Us</a></li>
             <li>Careers</li>
             <li>Blog</li>
             <li>Privacy Policy</li>
@@ -393,7 +393,7 @@
         <div class="footer-col">
           <h4>Support</h4>
           <ul>
-            <li>Contact Us</li>
+            <li><a href="#" id="contact-link">Contact Us</a></li>
             <li>Sitemap</li>
             <li>General Terms</li>
           </ul>
@@ -412,6 +412,52 @@
       </div>
     </footer>
 
+
+    <div id="about-modal" class="modal-overlay">
+    <div class="modal-box">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2>About GoCab.</h2>
+        </div>
+        <div class="modal-body">
+            <p><strong>Driven by Trust.</strong></p>
+            <p>GoCab was founded in 2018 with a simple mission: to make travel across India safe, reliable, and transparent. We started with just 5 cars in Delhi, and today, we are proud to connect over 2,000 cities with a fleet of 5,000+ premium vehicles.</p>
+            <br>
+            <h4>Our Core Values</h4>
+            <ul style="list-style-position: inside; color: #555; margin-top: 10px;">
+                <li>🛡️ <strong>Safety First:</strong> Every car is tracked 24x7.</li>
+                <li>💰 <strong>Transparency:</strong> No hidden costs, ever.</li>
+                <li>⏰ <strong>Punctuality:</strong> We value your time as much as ours.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="contact-modal" class="modal-overlay">
+    <div class="modal-box">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2>Get in Touch</h2>
+        </div>
+        <div class="modal-body">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-location-dot" style="color:var(--primary)"></i> <strong>Head Office:</strong><br>Unit 404, Tech Park, Cyber City, Gurugram, India</p>
+                <p><i class="fa-solid fa-envelope" style="color:var(--primary)"></i> <strong>Email:</strong><br>support@gocab.com</p>
+                <p><i class="fa-solid fa-phone" style="color:var(--primary)"></i> <strong>Support:</strong><br>9090-123-456</p>
+            </div>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+            <form class="booking-form">
+                <div class="input-wrap" style="margin-bottom: 10px;">
+                    <input type="text" placeholder="Your Name" style="padding: 5px;">
+                </div>
+                <div class="input-wrap" style="margin-bottom: 10px;">
+                    <textarea placeholder="How can we help?" style="width: 100%; border: none; outline: none; font-family: inherit;" rows="3"></textarea>
+                </div>
+                <button type="button" class="btn-app" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
     <script src="script.js"></script>
   </body>
 </html>
