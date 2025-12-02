@@ -68,4 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     // Trigger once on load
     revealOnScroll();
+
+    // --- 6. NEW: Mobile Menu Toggle Logic ---
+    const mobileBtn = document.querySelector('.mobile-toggle');
+    const navbarElement = document.getElementById('navbar');
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+            // Toggle the 'active' class on the navbar itself
+            navbarElement.classList.toggle('active');
+            
+            // Optional: Toggle icon between 'bars' and 'x' (close)
+            const icon = mobileBtn.querySelector('i');
+            if (navbarElement.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
 });
