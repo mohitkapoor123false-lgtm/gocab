@@ -89,4 +89,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- 7. NEW: Footer Modal Logic ---
+    const aboutLink = document.getElementById('about-link');
+    const contactLink = document.getElementById('contact-link');
+    const aboutModal = document.getElementById('about-modal');
+    const contactModal = document.getElementById('contact-modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    function openModal(modal) {
+        if (modal) {
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    function closeModal() {
+        document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show'));
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    if (aboutLink) aboutLink.addEventListener('click', (e) => { e.preventDefault(); openModal(aboutModal); });
+    if (contactLink) contactLink.addEventListener('click', (e) => { e.preventDefault(); openModal(contactModal); });
+
+    // Close on 'X' click
+    closeButtons.forEach(btn => btn.addEventListener('click', closeModal));
+
+    // Close when clicking outside the box
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+            closeModal();
+        }
+    });
 });
