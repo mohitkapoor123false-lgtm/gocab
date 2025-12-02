@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoCab - Premium Car Rentals</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <div class="logo">Go<span>Cab</span>.</div>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#fleet">Our Fleet</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+        <div class="nav-actions">
+          <div class="phone-number">
+            <i class="fa-solid fa-phone"></i> 24x7: <span>9090-123-456</span>
+          </div>
+          <button class="btn-login">Login</button>
+          <button class="btn-app">Download App</button>
+        </div>
+        <div class="mobile-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>
+            Reliable Cabs for <br />
+            Every Journey.
+          </h1>
+          <p>
+            Premium outstation cabs, hourly rentals, and airport transfers at
+            transparent prices.
+          </p>
+        </div>
+
+        <div class="booking-widget">
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="outstation">
+              Outstation
+            </button>
+            <button class="tab-btn" data-tab="local">Local Hourly</button>
+            <button class="tab-btn" data-tab="airport">Airport</button>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label>From</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-location-dot"></i>
+                <input
+                  type="text"
+                  placeholder="Start City (e.g. Delhi)"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group" id="destination-group">
+              <label>To</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-map-pin"></i>
+                <input type="text" placeholder="Destination (e.g. Agra)" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Pick Up Date</label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-calendar"></i>
+                <input type="date" id="pickupDate" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Pick Up Time</label>
+              <div class="input-wrap">
+                <i class="fa-regular fa-clock"></i>
+                <input type="time" required />
+              </div>
+            </div>
+
+            <button type="submit" class="btn-search">Explore Cabs</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="features section-padding" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose GoCab?</h2>
+          <p>We focus on safety, reliability, and value.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Safe Travel</h3>
+            <p>
+              Sanitized cars and verified chauffeurs for a worry-free journey.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3>Transparent Billing</h3>
+            <p>
+              What you see is what you pay. No hidden night charges or driver
+              allowance.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3>On-Time Service</h3>
+            <p>
+              We value your time. If we are late, your ride is free (T&C Apply).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fleet section-padding bg-light" id="fleet">
+      <div class="container">
+        <div class="section-header">
+          <h2>Premium Fleet</h2>
+          <p>Choose the car that fits your comfort.</p>
+        </div>
+        <div class="fleet-grid">
+          <div class="car-card">
+            <div
+              class="car-img"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+              "
+            ></div>
+            <div class="car-details">
+              <h4>Etios / Dzire</h4>
+              <span class="badge">Sedan</span>
+              <p>Ideal for 3-4 passengers with luggage.</p>
+              <div class="price">Starts @ ₹10/km</div>
+            </div>
+          </div>
+          <div class="car-card">
+            <div
+              class="car-img"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80');
+              "
+            ></div>
+            <div class="car-details">
+              <h4>Innova Crysta</h4>
+              <span class="badge">SUV</span>
+              <p>Premium comfort for 6-7 passengers.</p>
+              <div class="price">Starts @ ₹15/km</div>
+            </div>
+          </div>
+          <div class="car-card">
+            <div
+              class="car-img"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1566008885218-90abf9200ddb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+              "
+            ></div>
+            <div class="car-details">
+              <h4>Tempo Traveller</h4>
+              <span class="badge">Van</span>
+              <p>For large groups and family trips.</p>
+              <div class="price">Starts @ ₹22/km</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="process section-padding">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>How It Works</h2>
+          <p>Booking a ride is easier than ever.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <h3>Choose Location</h3>
+            <p>Enter your pickup and drop-off locations along with the date.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-number">02</div>
+            <div class="step-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h3>Select Car</h3>
+            <p>Choose from our wide range of fleets that suits your budget.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-number">03</div>
+            <div class="step-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <h3>Book & Go</h3>
+            <p>Pay securely and enjoy your ride with our expert chauffeurs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-banner reveal">
+      <div class="container app-content">
+        <div class="app-text">
+          <h2>Get the GoCab Mobile App</h2>
+          <p>
+            Book cabs on the go, track your driver in real-time, and get
+            exclusive app-only discounts.
+          </p>
+          <ul class="app-features">
+            <li><i class="fa-solid fa-check-circle"></i> Live Ride Tracking</li>
+            <li>
+              <i class="fa-solid fa-check-circle"></i> Emergency SOS Button
+            </li>
+            <li><i class="fa-solid fa-check-circle"></i> Share Ride Details</li>
+          </ul>
+          <div class="store-buttons">
+            <button class="btn-store">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </button>
+            <button class="btn-store">
+              <i class="fa-brands fa-apple"></i> App Store
+            </button>
+          </div>
+        </div>
+        <div class="app-image">
+          <img
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Mobile App Interface"
+            style="
+              border-radius: 20px;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            "
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section-padding bg-light">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Customer Stories</h2>
+          <p>Rated 4.8/5 by over 10,000 customers.</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              "The driver was extremely professional and the car was spotless.
+              Best outstation experience I've had in India."
+            </p>
+            <div class="reviewer">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="User"
+              />
+              <div>
+                <h5>Rahul Sharma</h5>
+                <span>Traveled to Jaipur</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Transparent pricing is what I love about GoCab. No hidden driver
+              charges at the end of the trip."
+            </p>
+            <div class="reviewer">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="User"
+              />
+              <div>
+                <h5>Priya Mehta</h5>
+                <span>Traveled to Pune</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="stars">★★★★☆</div>
+            <p>
+              "Very punctual service. The app made it easy to track the driver's
+              location. Highly recommended."
+            </p>
+            <div class="reviewer">
+              <img
+                src="https://randomuser.me/api/portraits/men/86.jpg"
+                alt="User"
+              />
+              <div>
+                <h5>Amit Verma</h5>
+                <span>Traveled to Manali</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container reveal">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is interstate tax included in the fare?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                For one-way trips, interstate taxes are usually included. For
+                round trips, you may need to pay state taxes directly at the
+                border checkposts. Please check the fare breakdown.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I change my booking date?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, you can modify your booking date up to 24 hours before the
+                trip free of charge via our app or website.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Are pets allowed in the cab?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Small pets are allowed in specific vehicles. Please inform
+                customer support immediately after booking so we can arrange a
+                pet-friendly car.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h3>GoCab.</h3>
+          <p>
+            India's leading outstation cab service provider with a presence in
+            2000+ cities.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li>Contact Us</li>
+            <li>Sitemap</li>
+            <li>General Terms</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 GoCab Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
