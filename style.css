@@ -394,10 +394,78 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
-    .hero-content { flex-direction: column; text-align: center; justify-content: center; }
+    /* 1. Reset Navbar Height */
+    .navbar {
+        height: auto; /* Allow navbar to grow when menu opens */
+        min-height: 80px;
+        transition: all 0.3s ease;
+    }
+
+    /* 2. Enable Wrapping */
+    .nav-container {
+        flex-wrap: wrap; /* Allows items to drop to next line */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
     .hero-text { margin-bottom: 40px; }
-    .nav-links, .nav-actions { display: none; }
-    .mobile-toggle { display: block; font-size: 1.5rem; cursor: pointer; }
+
+    /* 3. Reorder Items for Mobile Layout */
+    /* Logo stays first */
+    .logo {
+        order: 0;
+    }
+
+    /* Toggle button stays second (top right) */
+    .mobile-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        order: 1;
+        margin-left: auto; /* Pushes toggle to the far right */
+    }
+
+    /* 4. Hide Menu Items by Default */
+    .nav-links, .nav-actions {
+        display: none;
+        width: 100%; /* Force them to take full width of the container */
+        text-align: center;
+    }
+
+    /* 5. ACTIVE STATE (When JavaScript adds the .active class) */
+    
+    /* Show Links */
+    .navbar.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        order: 2; /* Drops below logo/toggle */
+        padding: 20px 0;
+        gap: 20px;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 20px;
+    }
+
+    /* Show Buttons */
+    .navbar.active .nav-actions {
+        display: flex;
+        flex-direction: column;
+        order: 3; /* Drops below links */
+        padding-bottom: 30px;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    /* Make buttons look better on mobile */
+    .navbar.active .nav-actions button {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
     .footer-content { grid-template-columns: 1fr 1fr; }
 }
 
